@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    font-size: 60%;
+
+    --background-color-body: #F9F9F9;
+    --background-color-container: #D9D9D9;
+    --background-color-button: #6BDC84;
+    --color-secondary-text: #606060;
+    --color-main-text: #33A04B;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body,#root{
+    overflow-x: hidden;
+    height: auto;
+}
+
+
+body {
+     /* background-color: var(--background-color-body); */
+     background: url('../assets/wallpaper.jpg');
+     background-size: cover;
+}
+
+#root {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+body, input, select, button, textarea {
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+input, button, textarea {
+    border-radius: 0;
+}
+
+button:active, input:active, select:active  {
+  outline: none;
+}
+
+button:focus, input:focus, select:focus {
+  outline: 0;
+}
+
+h1 {
+    color: var(--color-main-text);
+    font-weight: 500;
+}
+
+form label {
+    display: block;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-secondary-text);
+  }
+  
+form input,form select {
+    color: var(--color-secondary-text);
+    border: 2px var(--background-color-button) solid;
+    background: transparent;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 15px 10px;
+    width: 100%;
+    display: block;
+  }
