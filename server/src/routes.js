@@ -7,6 +7,8 @@ const SessionController = require('./app/controllers/SessionController');
 // const controllers = requireDir('./app/controllers')
 
 const authMiddleware = require('./app/middleware/auth');
+const ServicesController = require('./app/controllers/ServicesController');
+const { Router } = require('express');
 
 // Primeira rota
 routes.get('/',(req,res) => {res.send('hello world');})
@@ -29,6 +31,15 @@ routes.post('User/ResendEmail', UsersController.ResendEmail);
 routes.put('/User/UpdatePassword', UsersController.UpdatePassword);
 routes.post('/RecoverPassword', UsersController.RecoverPassword);
 routes.post('/RecoverPassword/ComparePin', UsersController.ComparePin);
+
+//Service Routes
+
+routes.get('/Services', ServicesController.Index);
+routes.get('/Services/:id', ServicesController.Detais);
+routes.post('/Services/Create', ServicesController.Create);
+routes.put('/Services/Update/:id', ServicesController.Update);
+routes.delete('/Services/Delete/:id', ServicesController.delete);
+
 
 
 module.exports = routes;
