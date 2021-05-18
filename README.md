@@ -1,1 +1,1 @@
-"# Party Plan" 
+# Party Plan
