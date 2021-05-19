@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { UpdatePassword } = require('./UsersController');
 
 const Service = mongoose.model('Service');
 
