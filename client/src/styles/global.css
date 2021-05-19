@@ -1,14 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 :root {
     font-size: 60%;
 
+<<<<<<< HEAD
     --background-color-body: #E9E9E9;
     --background-color-container: #CDCDCD;
     --background-color-button: #99D3DF;
     --color-secondary-text: #606060;
     --color-main-text: #88BBD6;
 
+=======
+    --background-color-body: #f9f9f9;
+    --background-color-container: #d9d9d9;
+    --background-color-button: #6bdc84;
+    --color-secondary-text: #606060;
+    --color-main-text: #33a04b;
+>>>>>>> 958bf46641a1f30afc5824ee370448a41abc7b2c
 }
 
 * {
@@ -17,15 +25,22 @@
     box-sizing: border-box;
 }
 
-html,body,#root{
+html,
+body,
+#root {
     overflow-x: hidden;
     height: auto;
 }
 
-
 body {
+<<<<<<< HEAD
      background-color: var(--background-color-container);
      
+=======
+    /* background-color: var(--background-color-body); */
+    background: url("../assets/wallpaper.jpg");
+    background-size: cover;
+>>>>>>> 958bf46641a1f30afc5824ee370448a41abc7b2c
 }
 
 #root {
@@ -36,22 +51,32 @@ body {
     height: 100vh;
 }
 
-body, input, select, button, textarea {
+body,
+input,
+select,
+button,
+textarea {
     font-weight: 400;
     font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
     border-radius: 0;
 }
 
-button:active, input:active, select:active  {
-  outline: none;
+button:active,
+input:active,
+select:active {
+    outline: none;
 }
 
-button:focus, input:focus, select:focus {
-  outline: 0;
+button:focus,
+input:focus,
+select:focus {
+    outline: 0;
 }
 
 h1 {
@@ -65,9 +90,10 @@ form label {
     font-weight: 600;
     margin-bottom: 5px;
     color: var(--color-secondary-text);
-  }
-  
-form input,form select {
+}
+
+form input,
+form select {
     color: var(--color-secondary-text);
     border: 2px var(--background-color-button) solid;
     background: transparent;
@@ -76,4 +102,15 @@ form input,form select {
     padding: 15px 10px;
     width: 100%;
     display: block;
-  }
+}
+
+#container-root {
+    min-width: 100vh;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
