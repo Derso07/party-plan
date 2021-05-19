@@ -2,21 +2,11 @@
 
 :root {
     font-size: 60%;
-
-<<<<<<< HEAD
     --background-color-body: #E9E9E9;
     --background-color-container: #CDCDCD;
     --background-color-button: #99D3DF;
     --color-secondary-text: #606060;
     --color-main-text: #88BBD6;
-
-=======
-    --background-color-body: #f9f9f9;
-    --background-color-container: #d9d9d9;
-    --background-color-button: #6bdc84;
-    --color-secondary-text: #606060;
-    --color-main-text: #33a04b;
->>>>>>> 958bf46641a1f30afc5824ee370448a41abc7b2c
 }
 
 * {
@@ -33,14 +23,7 @@ body,
 }
 
 body {
-<<<<<<< HEAD
      background-color: var(--background-color-container);
-     
-=======
-    /* background-color: var(--background-color-body); */
-    background: url("../assets/wallpaper.jpg");
-    background-size: cover;
->>>>>>> 958bf46641a1f30afc5824ee370448a41abc7b2c
 }
 
 #root {
