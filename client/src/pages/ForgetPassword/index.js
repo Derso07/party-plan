@@ -96,7 +96,7 @@ export default function ForgetPassword(){
         return(
             <>
                 <div className="container">
-                    <img src={logo} alt="logotipo" className="img-logo"/>
+                <h2 className="title">Party-Plan</h2>
                     {/* <h1 className="title-page"> New password </h1>
                     <hr className="line-title"/> */}
                     <form onSubmit={(e)=>HandleSubmitNewPassword(e)} className="form-container">
@@ -129,7 +129,7 @@ export default function ForgetPassword(){
         return(
             <>
                 <div className="container">
-                    <img src={logo} alt="logotipo" className="img-logo"/>
+                <h2 className="title">Party-Plan</h2>
                     {/* <h1 className="title-page"> Fill Pin </h1>
                     <hr className="line-title"/> */}
                     <form onSubmit={(e) => HandleSubmitPin(e)} className="form-container">
@@ -151,7 +151,7 @@ export default function ForgetPassword(){
     return(
         <>
             <div className="container">
-                <img src={logo} alt="logotipo" className="img-logo"/>
+            <h2 className="title">Party-Plan</h2>
                 {/* <h1 className="title-page"> Forget password </h1>
                 <hr className="line-title"/> */}
                 <form onSubmit={(e) => HandleSubmit(e)} className="form-container">

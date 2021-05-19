@@ -47,7 +47,7 @@ export default function Login() {
         <>
             <div className="app">
                 <div className="container"> 
-                <img src={logo} alt="logotipo" className="img-logo"/>
+                <h2 className="title">Party-Plan</h2>
 {/* 
                     <h1 className="title-page"> Login </h1>
                     <hr className="line-title"/> */}

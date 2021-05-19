@@ -11,15 +11,9 @@
     border-radius: 5px;   
 }
 
-.img-logo {
-    max-width:200px;
-    max-height:150px;
-    width: auto;
-    height: auto;
-    display: block; 
-    margin-left: auto; 
-    margin-right: auto;  
-    margin-bottom: 2.1em;
+.title{
+    text-align: center;
+    color: var(--color-secondary-text);
 }
 
 .title-page {
@@ -36,7 +30,7 @@
     margin-top: 1.2em;
 }
 .form-container label {
-    color: var(--color-main-text);
+    color: var(--color-secondary-text);
     font-weight: 500;
 }
 
