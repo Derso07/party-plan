@@ -32,7 +32,7 @@
     }
   } */
 
-#container-root {
+/* #container-root {
   min-width: 100vh;
   min-height: 100vh;
   height: auto;
@@ -41,8 +41,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
+} */
 
 #container-root > div {
-  margin: 25px ;
+    margin: 25px;
 }

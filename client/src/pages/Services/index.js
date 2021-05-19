@@ -18,30 +18,33 @@ function IndexServices (){
     },[]);
 
     return (
-        <div>
-            <ul>
-                {
-                    allServices.length !== 0 ? (
-                        <>
-                        {
-                            allServices.map((item,index,array) => (
-                                <Link to={`/services/${item._id}`}>
-                                <li key={index}>
-                                    <h3>{item.name}</h3>
-                                    <p>{item.description}</p>
-                                    <p>{item.address}</p>
-                                    <p>{item.price}</p>
-                                </li>
-                                </Link>
-                            ))
-                        }
-                        </>
-                    ) : (
-                        <p>Não existe nenhum serviço cadastrado</p>
-                    )
-                }
-            </ul>
-            <Link to="/services/create">Create</Link>
+        <div className= "container-services">
+            
+            <Link to="/services/create">Criar Anúncio</Link>
+           <div className="container-services-content">
+                <ul>
+                    {
+                        allServices.length !== 0 ? (
+                            <>
+                            {
+                                allServices.map((item,index,array) => (
+                                    <Link to={`/services/${item._id}`}>
+                                    <li key={index}>
+                                        <h3>Anúncio: {item.name}</h3>
+                                        <p>Descrição: {item.description}</p>
+                                        <p>Endereço: {item.address}</p>
+                                        <p>Preço: {item.price}</p>
+                                    </li>
+                                    </Link>
+                                ))
+                            }
+                            </>
+                        ) : (
+                            <p>Não existe nenhum serviço cadastrado</p>
+                        )
+                    }
+                </ul>
+            </div>
         </div>
     )
 }

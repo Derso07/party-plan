@@ -55,23 +55,23 @@ function UpdateService(){
 
     return (
         <>
-            <div>
-                <h1> Atualizar </h1>
-                <Link to="/services">Serviços Index</Link>    
-            </div>
-            <form onSubmit={(e) => handleSubmitServiceForm(e)}>
-                <label htmlFor="name">Nome:</label>
-                <input type="text" onChange={(e) => setDataService({...dataService, name: e.target.value})} defaultValue={dataService.name} />
-                <label htmlFor="description">Descrição:</label>
-                <input type="text" onChange={(e) => setDataService({...dataService, description: e.target.value})} defaultValue={dataService.description}/>
-                <label htmlFor="address">Endereço:</label>
-                <input type="text" onChange={(e) => setDataService({...dataService, address: e.target.value})} defaultValue={dataService.address}/>
-                <label htmlFor="price">Preço:</label>
-                <input type="number" onChange={(e) => setDataService({...dataService, price: e.target.value})} value={dataService.price}/>
-                <button type="submit">Submit</button>
-            </form>
+            <div className="container-services">
+                <Link to="/services">Voltar</Link>  
+                <h1>Atualizar </h1>            
+                <form onSubmit={(e) => handleSubmitServiceForm(e)}>
+                    <label htmlFor="name">Nome:</label>
+                    <input type="text" onChange={(e) => setDataService({...dataService, name: e.target.value})} defaultValue={dataService.name} />
+                    <label htmlFor="description">Descrição:</label>
+                    <input type="text" onChange={(e) => setDataService({...dataService, description: e.target.value})} defaultValue={dataService.description}/>
+                    <label htmlFor="address">Endereço:</label>
+                    <input type="text" onChange={(e) => setDataService({...dataService, address: e.target.value})} defaultValue={dataService.address}/>
+                    <label htmlFor="price">Preço:</label>
+                    <input type="number" onChange={(e) => setDataService({...dataService, price: e.target.value})} value={dataService.price}/>
+                    <button type="submit">Submit</button>
+                </form>
 
-            <ToastContainer/>
+                <ToastContainer/>
+            </div>
         </>
     ) 
 }

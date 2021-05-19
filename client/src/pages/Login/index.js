@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import logo from '../../assets/logo_financeiro.svg';
+import logo from '../../assets/partyplan.svg';
 import { login } from '../../services/auth';
 
 import {toast,ToastContainer} from 'react-toastify';
@@ -47,7 +47,7 @@ export default function Login() {
         <>
             <div className="app">
                 <div className="container"> 
-                <h2 className="title">Party-Plan</h2>
+                <img src={logo} alt="lototipo" className="img-logo"></img>
 {/* 
                     <h1 className="title-page"> Login </h1>
                     <hr className="line-title"/> */}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import imgLogo from '../../assets/logo_financeiro.svg';
+import imgLogo from '../../assets/partyplan.svg';
 
 import { logout } from '../../services/auth';
 

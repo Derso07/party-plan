@@ -22,22 +22,26 @@ function DetailsService(){
 
     return (
         <>
-        <div>
-            <h1> Details Service </h1>
+        <div className="container-services">            
+            <Link to="/services">Voltar</Link>
+            <div>
+                <h1>Detalhes do anúncio </h1>
+            </div>
+            <div className="container-services-content-details">                
+                <div>
+                    <p><b>Nome :</b>{service.name}</p>
+                    <p><b>Descrição :</b>{service.description}</p>
+                    <p><b>Endereço :</b>{service.address}</p>
+                    <p><b>Preço :</b>{service.price}</p>
+                </div>
+                <div>
+                    <Link to={`/services/update/${params._id}`}>
+                    <button>Atualizar</button>
+                    </Link>
+                    <button onClick={() => handleDeleteService()}>Excluir</button>
+                </div>
+            </div>
         </div>
-            <div>
-                <p><b>Nome :</b>{service.name}</p>
-                <p><b>Descrição :</b>{service.description}</p>
-                <p><b>Endereço :</b>{service.address}</p>
-                <p><b>Preço :</b>{service.price}</p>
-            </div>
-            <div>
-                <Link to="/services">Voltar</Link>
-                <Link to={`/services/update/${params._id}`}>
-                <button>Atualizar</button>
-                </Link>
-                <button onClick={() => handleDeleteService()}>Excluir</button>
-            </div>
         </>
     )
 }
