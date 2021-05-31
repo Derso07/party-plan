@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Calendar } from "react-multi-date-picker"
+import DatePicker, { DateObject, getAllDatesInRange } from "react-multi-date-picker"
+import DatePanel from "react-multi-date-picker/plugins/date_panel"
 import {Link} from 'react-router-dom';
 import {toast,ToastContainer} from 'react-toastify';
 import api from '../../services/api';
@@ -8,6 +11,8 @@ import './styles.css';
 function CreateServices(){
     // Variaveis
     const [dataService, setDataService] = useState({name: '', description: '', address: '', price: 0});
+    const [dates, setDates] = useState([])
+    const [allDates, setAllDates] = useState([])
 
     // UseEffects
     useEffect(() => {
@@ -63,6 +68,20 @@ function CreateServices(){
                 <input type="text" onChange={(e) => setDataService({...dataService, address: e.target.value})}/>
                 <label htmlFor="price">Preço:</label>
                 <input type="number" onChange={(e) => setDataService({...dataService, price: e.target.value})}/>
+                <Calendar 
+                    range
+                    value={dates}
+                    minDate={new DateObject().toFirstOfMonth()}
+                    maxDate={new DateObject().toLastOfMonth()}
+                    onChange={dateObjects => {
+                        setDates(dateObjects)
+                        setAllDates(getAllDatesInRange(dateObjects))
+                    }}
+                    plugins={[
+                        <DatePanel eachDaysInRange />
+                      ]}
+
+                />
                 <button type="submit">Submit</button>
             </form>
 
