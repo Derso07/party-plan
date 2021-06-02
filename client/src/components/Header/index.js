@@ -14,6 +14,7 @@ export default function Header(){
         <header className="header-home">
         <img src={imgLogo} alt="Logotipo"/>
         <div className="user-options">
+            <Link to="/services" className="link-logout"> Serviços </Link>
             <Link to="/auth" onClick={logout} className="link-logout"> Sair </Link>
         </div>
     </header>
