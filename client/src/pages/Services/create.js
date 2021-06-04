@@ -11,8 +11,6 @@ import './styles.css';
 function CreateServices(){
     // Variaveis
     const [dataService, setDataService] = useState({name: '', description: '', address: '', price: 0});
-    const [dates, setDates] = useState([])
-    const [allDates, setAllDates] = useState([])
 
     // UseEffects
     useEffect(() => {
@@ -68,53 +66,6 @@ function CreateServices(){
                 <input type="text" onChange={(e) => setDataService({...dataService, address: e.target.value})}/>
                 <label htmlFor="price">Preço:</label>
                 <input type="number" onChange={(e) => setDataService({...dataService, price: e.target.value})}/>
-                <Calendar 
-                    range
-                    value={dates}
-                    minDate={new DateObject().toFirstOfMonth()}
-                    maxDate={new DateObject().toLastOfMonth()}
-                    onChange={dateObjects => {
-                        setDates(dateObjects)
-                        setAllDates(getAllDatesInRange(dateObjects))
-                    }}
-                    plugins={[
-                        <DatePanel eachDaysInRange />
-                    ]}
-                    months={[
-                        "Jan", 
-                        "Fev", 
-                        "Mar", 
-                        "Abr", 
-                        "Mai", 
-                        "Jun", 
-                        "Jul", 
-                        "Ago", 
-                        "Set", 
-                        "Out", 
-                        "Nov", 
-                        "Dez"
-                      ]}
-                      weekDays={[
-                        "Dom", 
-                        "Seg", 
-                        "Ter", 
-                        "Qua", 
-                        "Qui", 
-                        "Sex", 
-                        "Sab"
-                      ]}
-
-                />
-                {dates.length > 1 &&
-                    <div>
-                    <h5>
-                        Todos os dias entre: {dates[0].format("DD/MM/YYYY")} e {dates[1].format("DD/MM/YYYY")}:
-                    </h5>
-                    <ul>
-                        {allDates.map((date, index) => <li key={index}>{date.format("DD/MM/YYYY")}</li>)}
-                    </ul>
-                    </div>    
-                }
                 <button type="submit">Submit</button>
             </form>
 
