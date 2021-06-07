@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Calendar } from "react-multi-date-picker"
-import DatePicker, { DateObject, getAllDatesInRange } from "react-multi-date-picker"
-import DatePanel from "react-multi-date-picker/plugins/date_panel"
 import {Link} from 'react-router-dom';
 import {toast,ToastContainer} from 'react-toastify';
 import api from '../../services/api';

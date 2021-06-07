@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Calendar } from "react-multi-date-picker"
-import DatePicker, { DateObject, getAllDatesInRange } from "react-multi-date-picker"
-import DatePanel from "react-multi-date-picker/plugins/date_panel"
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import { isToday, format } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+import { isAfter, parseISO } from 'date-fns/esm';
+import DayPicker, { DayModifiers } from 'react-day-picker';
 import { Link, useParams } from 'react-router-dom';
 import {toast,ToastContainer} from 'react-toastify';
 import api from '../../services/api';
 import './styles.css';
+import { Calendar } from '../../components/calendar';
 
 
 function UpdateService(){
-    const [dataService, setDataService] = useState({name: '', description: '', address: '', price: 0});
-    const [dates, setDates] = useState([])
-    const [allDates, setAllDates] = useState([])
-
     const params = useParams();
+    const [dataService, setDataService] = useState({name: '', description: '', address: '', price: 0});
+    const [selectedDate, setSelectedDate] = useState(new Date());
+   
 
     // UseEffects
     useEffect(() => {
@@ -22,6 +23,7 @@ function UpdateService(){
             setDataService(res.data);
         }
         getService();
+
     },[]);
 
     // Funções
@@ -71,55 +73,10 @@ function UpdateService(){
                     <input type="text" onChange={(e) => setDataService({...dataService, address: e.target.value})} defaultValue={dataService.address}/>
                     <label htmlFor="price">Preço:</label>
                     <input type="number" onChange={(e) => setDataService({...dataService, price: e.target.value})} value={dataService.price}/>
-                    <Calendar 
-                    range
-                    value={dates}
-                    minDate={new DateObject().toFirstOfMonth()}
-                    maxDate={new DateObject().toLastOfMonth()}
-                    onChange={dateObjects => {
-                        setDates(dateObjects)
-                        setAllDates(getAllDatesInRange(dateObjects))
-                    }}
-                    plugins={[
-                        <DatePanel eachDaysInRange />
-                    ]}
-                    months={[
-                        "Jan", 
-                        "Fev", 
-                        "Mar", 
-                        "Abr", 
-                        "Mai", 
-                        "Jun", 
-                        "Jul", 
-                        "Ago", 
-                        "Set", 
-                        "Out", 
-                        "Nov", 
-                        "Dez"
-                      ]}
-                      weekDays={[
-                        "Dom", 
-                        "Seg", 
-                        "Ter", 
-                        "Qua", 
-                        "Qui", 
-                        "Sex", 
-                        "Sab"
-                      ]}
-
-                />
-                {dates.length > 1 &&
-                    <div>
-                    <h5>
-                        Todos os dias entre: {dates[0].format("DD/MM/YYYY")} e {dates[1].format("DD/MM/YYYY")}:
-                    </h5>
-                    <ul>
-                        {allDates.map((date, index) => <li key={index}>{date.format("DD/MM/YYYY")}</li>)}
-                    </ul>
-                    </div>    
-                }
+                    <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
                     <button type="submit">Submit</button>
                 </form>
+                
 
                 <ToastContainer/>
             </div>
