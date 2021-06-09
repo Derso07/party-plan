@@ -110,54 +110,6 @@ function UpdateService() {
                         </div>
                     } */}
 
-
-                    {/* <Calendar 
-                    multiple
-                    value={dates}
-                    minDate={new DateObject().toFirstOfMonth()}
-                    maxDate={new DateObject().toLastOfMonth()}
-                    onChange={dateObjects => {
-                        setDates(dateObjects)
-                        setAllDates(getAllDatesInRange(dateObjects))
-                    }}
-                    plugins={[
-                        <DatePanel eachDaysInRange />
-                    ]}
-                    months={[
-                        "Jan", 
-                        "Fev", 
-                        "Mar", 
-                        "Abr", 
-                        "Mai", 
-                        "Jun", 
-                        "Jul", 
-                        "Ago", 
-                        "Set", 
-                        "Out", 
-                        "Nov", 
-                        "Dez"
-                      ]}
-                      weekDays={[
-                        "Dom", 
-                        "Seg", 
-                        "Ter", 
-                        "Qua", 
-                        "Qui", 
-                        "Sex", 
-                        "Sab"
-                      ]}
-
-                /> */}
-                    {/* { {dates.length > 1 &&
-                    <div>
-                    <h5>
-                        Todos os dias entre: {dates[0].format("DD/MM/YYYY")} e {dates[1].format("DD/MM/YYYY")}:
-                    </h5>
-                    <ul>
-                        {allDates.map((date, index) => <li key={index}>{date.format("DD/MM/YYYY")}</li>)}
-                    </ul>
-                    </div>    
-                } } */}
                     <button type="submit">Submit</button>
                 </form>
 
