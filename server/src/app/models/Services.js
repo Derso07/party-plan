@@ -22,6 +22,12 @@ const ServiceSchema = new mongoose.Schema({
         required: true,
     },
 
+    dates: {
+        type: [Date],
+        required: true,
+        default: []
+    }
+
     //category
 });
 
