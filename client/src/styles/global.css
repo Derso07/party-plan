@@ -2,11 +2,11 @@
 
 :root {
     font-size: 60%;
-    --background-color-body: #e9e9e9;
-    --background-color-container: #cdcdcd;
-    --background-color-button: #99d3df;
-    --color-secondary-text: #606060;
-    --color-main-text: #88bbd6;
+    --background-color-body: #2e856e;
+    --background-color-container: #b8d5cd;
+    --background-color-button: #8abaae;
+    --color-secondary-text: #040a07;
+    --color-main-text: #040a07;
 }
 
 * {
@@ -72,12 +72,12 @@ form label {
     font-size: larger;
     font-weight: 600;
     margin-bottom: 5px;
-    color: var(--color-secondary-text);
+    color: var(--color-main-text);
 }
 
 form input,
 form select {
-    color: var(--color-secondary-text);
+    color: var(--color-main-text);
     border: 2px var(--background-color-button) solid;
     background: transparent;
     border-radius: 5px;

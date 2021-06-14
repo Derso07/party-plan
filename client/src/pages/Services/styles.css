@@ -35,10 +35,13 @@
     margin: 10px;
 }
 
+.calendar {
+    margin: 50px;
+}
+
 @media only screen and (max-width: 768px) {
     .container-services {
         padding: 15px 20px;
         margin-top: 120px;
     }
 }
-

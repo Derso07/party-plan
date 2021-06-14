@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import api from '../../services/api';
 
-import logo from '../../assets/logo_financeiro.svg';
+import logo from '../../assets/partyplan.svg';
 
 import {toast,ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
@@ -56,7 +56,7 @@ export default function Register(){
     return(
         <>
         <div className="container">
-        <h2 className="title">Party-Plan</h2>
+        <img src={logo} alt="logotipo" className="img-logo"></img>
             {/* <h1 className="title-page"> Register </h1>
                 <hr className="line-title"/> */}
                 <form onSubmit={e=>HandleSubmit(e)} className="form-container">

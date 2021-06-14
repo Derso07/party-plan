@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Calendar } from "react-multi-date-picker";
 import api from '../../services/api';
 import {Link} from 'react-router-dom';
 import './styles.css';
@@ -34,6 +35,8 @@ function IndexServices (){
                                         <p>Descrição: {item.description}</p>
                                         <p>Endereço: {item.address}</p>
                                         <p>Preço: {item.price}</p>
+                                        <p>Datas: {item.date} </p>
+                                        <Calendar /> 
                                     </li>
                                     </Link>
                                 ))

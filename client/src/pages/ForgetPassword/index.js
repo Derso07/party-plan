@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import api from '../../services/api';
 
-import logo from '../../assets/logo_financeiro.svg';
+import logo from '../../assets/partyplan.svg';
 
 import '../Login/styles.css';
 import { toast, ToastContainer } from 'react-toastify';
@@ -96,7 +96,7 @@ export default function ForgetPassword(){
         return(
             <>
                 <div className="container">
-                <h2 className="title">Party-Plan</h2>
+                <img src={logo} alt="lototipo" className="img-logo"></img>
                     {/* <h1 className="title-page"> New password </h1>
                     <hr className="line-title"/> */}
                     <form onSubmit={(e)=>HandleSubmitNewPassword(e)} className="form-container">
@@ -129,7 +129,7 @@ export default function ForgetPassword(){
         return(
             <>
                 <div className="container">
-                <h2 className="title">Party-Plan</h2>
+                <img src={logo} alt="lototipo" className="img-logo"></img>
                     {/* <h1 className="title-page"> Fill Pin </h1>
                     <hr className="line-title"/> */}
                     <form onSubmit={(e) => HandleSubmitPin(e)} className="form-container">
@@ -151,7 +151,7 @@ export default function ForgetPassword(){
     return(
         <>
             <div className="container">
-            <h2 className="title">Party-Plan</h2>
+            <img src={logo} alt="lototipo" className="img-logo"></img>
                 {/* <h1 className="title-page"> Forget password </h1>
                 <hr className="line-title"/> */}
                 <form onSubmit={(e) => HandleSubmit(e)} className="form-container">

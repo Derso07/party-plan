@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Calendar } from "react-multi-date-picker";
 import api from '../../services/api';
 import {Link} from 'react-router-dom';
 import './styles.css';
+import salao from '../../assets/salao.jpg';
 
 function IndexServices (){
 
@@ -19,8 +19,8 @@ function IndexServices (){
     },[]);
 
     return (
-        <div className= "container-services">
-           <div className="container-services-content">
+        <div className= "container-home">
+           <div className="container-home-content">
                 <ul>
                     {
                         allServices.length !== 0 ? (
@@ -28,13 +28,12 @@ function IndexServices (){
                             {
                                 allServices.map((item,index,array) => (
                                     <Link to={`/Services/${item._id}`}>
-                                    <li key={index}>
+                                    <li key={index}>                                        
+                                    <img src={salao}></img>
                                         <h3>Anúncio: {item.name}</h3>
                                         <p>Descrição: {item.description}</p>
                                         <p>Endereço: {item.address}</p>
                                         <p>Preço: {item.price}</p>
-                                        <p>Datas: {item.date} </p>
-                                        <Calendar /> 
                                     </li>
                                     
                                     </Link>
