@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Calendar } from "react-multi-date-picker"
-import DatePicker, { DateObject, getAllDatesInRange } from "react-multi-date-picker"
 import DatePanel from "react-multi-date-picker/plugins/date_panel"
 import { Link, useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
@@ -91,24 +90,15 @@ function UpdateService() {
                     <input type="number" onChange={(e) => setDataService({ ...dataService, price: e.target.value })} value={dataService.price} />
                     <Calendar
                         multiple
-                        value={dates}
+                        // defaultValues={dataService.dates}
+                        value={dates[0] ? dates : dataService.dates}
                         onChange={handleChangeDates}
                         format="MM/DD/YYYY"
                         // excludeDates={dataService.dates}
                         plugins={[
-                            <DatePanel eachDaysInRange value={dataService.dates}/>
+                            <DatePanel eachDaysInRange value={dataService.dates} />
                         ]}
                     />
-                    {/* {dates.length > 1 &&
-                        <div>
-                            <h5>
-                                Todos os dias entre: {dates[0].format("DD/MM/YYYY")} e {dates[1].format("DD/MM/YYYY")}:
-                            </h5>
-                            <ul>
-                                {dates.map((date, index) => <li key={index}>{date.format("DD/MM/YYYY")}</li>)}
-                            </ul>
-                        </div>
-                    } */}
 
                     <button type="submit">Submit</button>
                 </form>
