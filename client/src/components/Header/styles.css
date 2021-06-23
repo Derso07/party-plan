@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    color: #fff;
 }
 
 .header-home img {
@@ -19,6 +20,10 @@
 .user-options {
     display: flex;
     align-items: center;
+}
+
+.user-options a{
+    color: #fff;
 }
 
 .link-username::before {

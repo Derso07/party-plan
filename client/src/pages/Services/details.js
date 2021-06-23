@@ -23,7 +23,7 @@ function DetailsService(){
     return (
         <>
         <div className="container-services">            
-            <Link to="/services">Voltar</Link>
+            <Link to="/services" className="botao-back">Voltar</Link>
             <div>
                 <h1>Detalhes do anúncio </h1>
             </div>

@@ -20,23 +20,24 @@ function IndexServices (){
 
     return (
         <div className= "container-home">
+            <h1>Agende aqui o seu salão!</h1>
+            <br></br>
            <div className="container-home-content">
-                <ul>
+                <ul className="lista-salao">
                     {
                         allServices.length !== 0 ? (
                             <>
                             {
                                 allServices.map((item,index,array) => (
                                     <Link to={`/Services/${item._id}`}>
-                                    <li key={index}>                                        
+                                    <li key={index}>                                    
                                     <img src={salao}></img>
                                         <h3>Anúncio: {item.name}</h3>
                                         <p>Descrição: {item.description}</p>
                                         <p>Endereço: {item.address}</p>
                                         <p>Preço: {item.price}</p>
-                                    </li>
-                                    
-                                    </Link>
+                                        </li>
+=                                    </Link>
                                 ))
                             }
                             </>

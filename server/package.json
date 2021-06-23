@@ -17,9 +17,11 @@
     "express": "^4.17.1",
     "generate-pin": "^1.0.5",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.9",
-    "nodemailer": "^6.6.0",
-    "require-dir": "^1.2.0"
+    "mongoose": "^5.12.14",
+    "node": "^16.3.0",
+    "nodemailer": "^6.6.1",
+    "require-dir": "^1.2.0",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

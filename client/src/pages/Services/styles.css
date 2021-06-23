@@ -1,12 +1,26 @@
 .container-services {
     background-color: var(--background-color-body);
-    margin-top: 50px;
+    margin-top: 90px;
     margin: auto;
     min-height: 50vh;
     height: auto;
-    width: 45vw;
+    width: 80vw;
     padding: 25px 50px;
     border-radius: 5px;
+    color: #fff;
+}
+
+.container-services h1{
+    color: #fff;
+    margin-top: 15px;
+}
+
+.botao-back{
+    text-decoration: none;
+    color: #fff;
+    border: #e4605e solid 1px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .container-services-bar {
@@ -16,7 +30,13 @@
     padding: 20px 0;
 }
 
+.container-services-content{
+    display: flex;
+    margin-top: 15px;
+}
+
 .container-services-content ul {
+    display: flex;
     list-style-type: none;
 }
 .container-services-content ul li,
@@ -37,6 +57,24 @@
 
 .calendar {
     margin: 50px;
+}
+
+.container-services-content a{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.container-services-content a li{
+    color: #fff;
+    width: 400px;
+}
+
+.criar-salao{
+    text-decoration: none;
+    color: #fff;
+    border: #b8d5cd solid 1px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 @media only screen and (max-width: 768px) {

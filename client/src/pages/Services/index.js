@@ -21,9 +21,9 @@ function IndexServices (){
     return (
         <div className= "container-services">
             
-            <Link to="/services/create">Criar Anúncio</Link>
+            <Link to="/services/create" className="criar-salao">Criar Anúncio</Link>
            <div className="container-services-content">
-                <ul>
+                <ul className="lista-salao">
                     {
                         allServices.length !== 0 ? (
                             <>
